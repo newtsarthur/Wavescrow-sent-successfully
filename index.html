@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Nome do site -->
+    <title>Wavescrow - Sugestões</title>
+    <link rel="stylesheet" type="text/css" href="css updating/style.css">
+    <link rel="icon" type="image/jpg" href="https://steamuserimages-a.akamaihd.net/ugc/925919905791817402/CEE8C7C38A2284BA4C44ACC7C41F507937D2ADDD/" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Merienda&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="container2">
+            <section><h1 class="texto">Wavescrow recebeu sua sugestão!</h1></section>
+        </div>
+        <div class="container2">
+            <img class="up" src="img updating/Crowgif.gif">
+            <!-- <img src="img updating/Crowgif2.gif"> -->
+            <!-- <img src="img updating/Crowlogo.png"> -->
+        </div>
+        <div class="container2">
+            <section><h2 class="texto" id="noned">Obrigado!</h2></section>
+        </div>
+        <div class="container2">
+            <button title="fechar esta página" type="button" class="fechar" onclick="window.close()" id="botao">Fechar</button>
+        </div>
+    </div>
+
+<script>
+    function typeWriter(elemento) {
+        const textoArray = elemento.innerHTML.split("");
+        elemento.innerHTML = "";
+        textoArray.forEach((letra, i) => {
+            setTimeout(function() {
+                elemento.innerHTML += letra;
+            }, 75 * i)
+        });
+    }
+
+    const título = document.querySelector('h1');
+    typeWriter(título);
+
+    document.getElementById("botao").onclick = function() {
+        window.close()
+    }
+
+</script>
+
+<script>
+    document.getElementById("noned").style.display = "none";
+
+    function typeWriter(elemento) {
+        setTimeout(function(){
+            const textoArray = elemento.innerHTML.split("");
+            document.getElementById("noned").style.display = "flex";
+            elemento.innerHTML = "";
+            textoArray.forEach((letra, i) => {
+                setTimeout(function() {
+                    elemento.innerHTML += letra;
+                }, 75 * i)
+            });
+        },2378);
+    }
+
+    const subtitulo = document.querySelector('h2');
+    typeWriter(subtitulo);
+
+    document.getElementById("botao").style.display = "none";
+
+    setTimeout(function() {
+        document.getElementById("botao").style.display = "flex";
+    }, 3350);
+
+</script>
+
+</body>
+</html>
